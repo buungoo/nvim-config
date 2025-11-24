@@ -667,6 +667,18 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         servers.rnix = {}
         servers.nil_ls = {}
       end
+      servers.rust_analyzer = {
+        settings = {
+          ['rust-analyzer'] = {
+            cargo = {
+              allFeatures = true,
+            },
+            checkOnSave = {
+              command = "clippy",
+            },
+          },
+        },
+      }
       servers.lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
