@@ -102,6 +102,8 @@
           nixd
           stylua
           rust-analyzer
+          rustc
+          cargo
         ];
         kickstart-debug = [
           delve
