@@ -38,6 +38,11 @@
     # for specific tags, branches and commits, see:
     # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
 
+    plugins-nvim-window = {
+      url = "gitlab:yorickpeterse/nvim-window";
+      flake = false;
+    };
+
   };
 
   # see :help nixCats.flake.outputs
@@ -147,7 +152,9 @@
           #     lua
           #   ]
           # ))
-        ];
+        ] ++ (with pkgs.neovimPlugins; [
+          nvim-window
+        ]);
         kickstart-debug = [
           nvim-dap
           nvim-dap-ui
