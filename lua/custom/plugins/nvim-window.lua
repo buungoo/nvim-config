@@ -3,10 +3,9 @@ return {
   'yorickpeterse/nvim-window',
   config = function()
     require('nvim-window').setup {
-      -- The characters available for hinting windows
+      -- The characters available for hinting windows (home row keys)
       chars = {
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+        'a', 's', 'd', 'f', 'j', 'k', 'l', 'h', 'g'
       },
 
       -- A group to use for overwriting the Normal highlight group in the floating
@@ -28,8 +27,8 @@ return {
     }
 
     -- Set up keybinding to trigger window picker
-    vim.keymap.set('n', '<leader>wj', function()
+    vim.keymap.set('n', '<leader>w', function()
       require('nvim-window').pick()
-    end, { desc = '[W]indow [J]ump with hints' })
+    end, { desc = '[W]indow jump with hints' })
   end,
 }
