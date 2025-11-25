@@ -136,6 +136,7 @@
           cmp-nvim-lsp
           cmp-path
           tokyonight-nvim
+          kanagawa-nvim
           todo-comments-nvim
           mini-nvim
           nvim-treesitter.withAllGrammars
